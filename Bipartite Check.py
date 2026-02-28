@@ -1,9 +1,21 @@
 #Implementation of Bipartite Check using DFS
 def is_bipartite_dfs(graph):
     """
-    Check if graph is bipartite using DFS.
-    graph: adjacency list → {node: [neighbors]}
-    Returns True if bipartite, else False
+    Check if an undirected graph is bipartite using DFS.
+    
+    A bipartite graph can be colored using two colors such that
+    no two adjacent vertices have the same color.
+    
+    Args:
+        graph: Adjacency list representation {node: [neighbors]}
+    
+    Returns:
+        True if the graph is bipartite, False otherwise
+    
+    Example:
+        >>> graph = {0: [1, 3], 1: [0, 2], 2: [1, 3], 3: [0, 2]}
+        >>> is_bipartite_dfs(graph)
+        True
     """
     color = {}
 
